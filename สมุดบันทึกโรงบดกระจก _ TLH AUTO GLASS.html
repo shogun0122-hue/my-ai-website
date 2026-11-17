@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>สมุดบันทึกโรงบดกระจก | TLH AUTO GLASS</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Sarabun:wght@400;600&display=swap">
+<style>
+:root{--bg:#f1f7f6;--card:#fff;--ink:#12302e;--mute:#58716e;--line:#c3d9d5;--glass:#dff1ee;--ac:#0e7c72;--acink:#fff;--warn:#b4531a;--warnbg:#fbeee5;--ok:#2f7d3b;--okbg:#e5f3e7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a19;--card:#162726;--ink:#e2f0ee;--mute:#92aeaa;--line:#2b4543;--glass:#1d3836;--ac:#3cc2b3;--acink:#062421;--warn:#f0a070;--warnbg:#3a2418;--ok:#7fd08a;--okbg:#1c3320;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a19;--card:#162726;--ink:#e2f0ee;--mute:#92aeaa;--line:#2b4543;--glass:#1d3836;--ac:#3cc2b3;--acink:#062421;--warn:#f0a070;--warnbg:#3a2418;--ok:#7fd08a;--okbg:#1c3320;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Sarabun,"Noto Sans Thai",sans-serif}
+h1,h2,h3,.k{font-family:Kanit,Sarabun,sans-serif;font-weight:500;margin:0}
+header{background:var(--ac);color:var(--acink);padding:14px 16px}
+header h1{font-size:20px}header p{margin:0;opacity:.85;font-size:14px}
+nav{display:flex;gap:6px;padding:10px 16px 0;max-width:980px;margin:auto}
+nav button{flex:1;padding:10px;border:1px solid var(--line);border-bottom:0;border-radius:10px 10px 0 0;background:var(--glass);color:var(--ink);font:inherit;cursor:pointer}
+nav button[aria-selected=true]{background:var(--card);font-weight:600}
+main{max-width:980px;margin:auto;padding:0 16px 48px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:0 0 12px 12px;padding:16px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none}
+.flow li{padding:4px 10px;border-radius:99px;background:var(--glass);font-size:14px;color:var(--mute)}
+.flow li.on{background:var(--ac);color:var(--acink)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+label{display:block;font-size:14px;color:var(--mute)}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;min-height:40px}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid var(--ac);outline-offset:1px}
+button{font:inherit;cursor:pointer}
+.btn{padding:9px 14px;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:var(--acink);font-weight:600}
+.btn.alt{background:transparent;color:var(--ac)}
+.btn.sm{padding:4px 10px;font-size:14px}
+.batch{border:1px solid var(--line);border-left:6px solid var(--ac);border-radius:10px;margin:16px 0;background:var(--card)}
+.bh{display:flex;flex-wrap:wrap;gap:10px;align-items:end;padding:12px;background:var(--glass);border-radius:4px 10px 0 0}
+.bh>div{flex:1 1 150px}
+.step{padding:12px;border-top:1px dashed var(--line)}
+.sh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+.sh b{font-family:Kanit,sans-serif;font-weight:500}
+.dur{font-family:Kanit,sans-serif;padding:2px 10px;border-radius:99px;background:var(--glass)}
+.dur.warn{background:var(--warnbg);color:var(--warn)}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.bal{padding:10px 12px;border-top:1px solid var(--line);font-size:15px}
+.bal.warn{background:var(--warnbg);color:var(--warn)}.bal.ok{background:var(--okbg);color:var(--ok)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left;font-size:15px}
+th{background:var(--glass);font-weight:600}
+td.n,th.n{text-align:right}
+.sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.msg{padding:10px 12px;border-radius:8px;margin-top:12px;background:var(--warnbg);color:var(--warn)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}
+.hide{display:none}
+:root{--bg:#f3faf4;--card:#fff;--ink:#17361f;--mute:#5b7762;--line:#cfe5d4;--glass:#e4f4e7;--ac:#1e8a4a;--acink:#fff;--ok:#1e7a3f;--okbg:#e2f4e6}
+header{background:linear-gradient(120deg,#146f38,#218f4f)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a12;--card:#14261b;--ink:#e3f2e7;--mute:#93b39c;--line:#27432f;--glass:#1b3324;--ac:#4cc77c;--acink:#06210f;--ok:#86d99c;--okbg:#17321f}:root:not([data-theme="light"]) header{background:var(--ac)}}
+:root[data-theme="dark"]{--bg:#0d1a12;--card:#14261b;--ink:#e3f2e7;--mute:#93b39c;--line:#27432f;--glass:#1b3324;--ac:#4cc77c;--acink:#06210f;--ok:#86d99c;--okbg:#17321f}
+:root[data-theme="dark"] header{background:var(--ac)}
+html{scroll-behavior:smooth}
+.btn,nav button,input,select{transition:background .15s,border-color .15s,transform .1s}
+.btn:active{transform:scale(.97)}
+.batch.col .step{display:none}
+.batch.col .bt{display:none}
+.batch.col .bh{border-radius:4px 10px 10px 4px}
+.batch.new{animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.batch.new{animation:none}}
+:root{--bg:#fff;--leaf:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 3C9 3 4 9 4 15c0 2 .7 3.8 1.7 5C7 14 11 10 16 8c-4 3-7 7-8.5 12.3C9 20.7 10 21 11 21c7 0 9-9 9-18z' fill='%231e8a4a'/%3E%3C/svg%3E")}
+header,nav,main{position:relative;z-index:1}
+.panel{background:color-mix(in srgb,var(--card) 84%,transparent)}
+body::before{content:"";position:fixed;right:-50px;bottom:-40px;width:280px;height:280px;opacity:.07;background:var(--leaf) center/contain no-repeat;transform:rotate(-20deg);pointer-events:none}
+#leaves{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+#leaves i{position:absolute;top:-40px;width:var(--s);height:var(--s);opacity:.3;background:var(--leaf) center/contain no-repeat;animation:fall var(--t) linear var(--d) infinite}
+@keyframes fall{to{transform:translate(70px,115vh) rotate(380deg)}}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;border-radius:99px;padding:12px 20px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+@media(prefers-reduced-motion:reduce){#leaves i{animation:none}}
+@media print{#leaves,.fab,body::before{display:none}.batch.col .step{display:block}header,nav,.bar,.btn,.flow{display:none}.panel{border:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="leaves" aria-hidden="true"><i style="left:5%;--s:24px;--t:28s;--d:-6s"></i><i style="left:20%;--s:18px;--t:34s;--d:-20s"></i><i style="left:38%;--s:28px;--t:30s;--d:-12s"></i><i style="left:57%;--s:20px;--t:36s;--d:-27s"></i><i style="left:74%;--s:26px;--t:27s;--d:-2s"></i><i style="left:90%;--s:18px;--t:32s;--d:-16s"></i></div>
+<header><h1>🌿 สมุดบันทึกโรงบดกระจก</h1><p>TLH AUTO GLASS แต้ล้งฮั้ว 95 กรุ๊ป จำกัด · เก็บข้อมูลเพื่อคำนวณค่า CFP</p></header>
+<nav role="tablist">
+<button role="tab" id="t1" aria-selected="true">บันทึกรายวัน</button>
+<button role="tab" id="t2" aria-selected="false">ประวัติและสรุปรายเดือน</button>
+</nav>
+<main><div class="panel" id="app"></div></main>
+<script>
+const STEPS=["เตรียมกระจก","นำกระจกแช่น้ำ (10–12 ชม.)","ลอกฟิล์มออก","นำแป้นกระจกออก / ตัดขอบเซรามิก","เข้าเครื่องบดหยาบ","เข้าเครื่องปั่นแยกกระจก / PVB","เข้าเครื่องร่อนแยกขนาด","บรรจุถุงละ 1,000 กก. รอนำส่ง"];
+const HINT=["จำนวนพาเลท","","น้ำหนักฟิล์มที่ลอกได้","น้ำหนักก่อน/หลังตัดขอบ","น้ำหนักเข้าเครื่อง","น้ำหนักกระจกสะอาด / ติด PVB","น้ำหนักแยกตามตะแกรง","จำนวนถุง · น้ำหนักรวม"];
+const KEY="tlh-glass-log-v1";
+let S={days:{},months:{},tol:3};
+try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+let _t;const flush=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};const save=()=>{clearTimeout(_t);_t=setTimeout(flush,250)};addEventListener("pagehide",flush);addEventListener("visibilitychange",()=>{if(document.hidden)flush()});
+const pad=n=>String(n).padStart(2,"0");
+const ymd=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+let cur=ymd(new Date()),tab=1,ym=cur.slice(0,7);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const num=v=>{const n=parseFloat(v);return isNaN(n)?0:n};
+const day=()=>S.days[cur]||(S.days[cur]={type:"",rec:"",rev:"",signed:false,batches:[]});
+const newStep=()=>({sd:"",st:"",ed:"",et:"",wi:"",wo:"",op:"",nt:""});
+const dur=s=>{if(!s.sd||!s.st||!s.ed||!s.et)return null;const m=(new Date(s.ed+"T"+s.et)-new Date(s.sd+"T"+s.st))/6e4;return m>=0?m:null};
+const fmt=m=>m==null?"–":Math.floor(m/60)+":"+pad(Math.round(m%60));
+const kg=n=>n.toLocaleString("th-TH",{maximumFractionDigits:1});
+const nowParts=()=>{const d=new Date();return[ymd(d),pad(d.getHours())+":"+pad(d.getMinutes())]};
+
+function balance(b){
+ const pre=num(b.pre),film=num(b.st[2].wo),waste=num(b.waste),fin=num(b.st[7].wo);
+ if(!pre||!fin)return null;
+ const diff=pre-film-waste-fin,pct=diff/pre*100;
+ return{diff,pct,bad:Math.abs(pct)>S.tol};
+}
+function render(){
+ $t1.setAttribute("aria-selected",tab==1);$t2.setAttribute("aria-selected",tab==2);
+ $app.innerHTML=tab==1?viewDay():viewMonth();
+ if(tab==1)calc();
+}
+function viewDay(){
+ const d=day(),L=d.signed?"disabled":"";
+ const b=d.batches;
+ return `<ul class="flow" id="flow"></ul>
+ <div class="row">
+  <label>วันที่<input type="date" id="date" value="${cur}"></label>
+  <label>ชนิดกระจก<select data-d="type" ${L}><option value="">เลือก</option><option ${d.type=="LAMINATE"?"selected":""}>LAMINATE</option><option ${d.type=="TEMPERED"?"selected":""}>TEMPERED</option></select></label>
+  <label>ผู้บันทึก<input data-d="rec" value="${esc(d.rec)}" ${L}></label>
+  <label>จำนวนรอบ (Batch) วันนี้<input value="${b.length}" disabled></label>
+ </div>
+ ${b.map((x,i)=>viewBatch(x,i,L)).join("")}
+ <div class="bar"><button class="btn" id="addB" ${L}>เปิดรอบ (Batch) ใหม่</button></div>
+ <h2>สรุปประจำวัน</h2><div class="tw" id="sum"></div>
+ <div class="sign">
+  <label>ผู้บันทึก (ลงนาม)<input data-d="rec" value="${esc(d.rec)}" ${L}></label>
+  <label>ผู้ตรวจสอบ (ลงนาม)<input data-d="rev" value="${esc(d.rev)}" ${L}></label>
+ </div>
+ <div id="msg"></div>${d.signed?"":'<button class="btn fab" data-add>+ เปิดรอบใหม่</button>'}
+ <div class="bar">
+  <button class="btn" id="sign">${d.signed?"ปลดล็อกเพื่อแก้ไข":"ลงนามรับรองและปิดวัน"}</button>
+  <button class="btn alt" onclick="print()">พิมพ์แบบฟอร์ม</button>
+ </div>`;
+}
+function viewBatch(x,i,L){
+ return `<section class="batch${x.col?" col":""}"><div class="bh">
+  <div><label>รอบที่ ${i+1} · รหัส / จำนวนพาเลท<input data-b="${i}" data-k="code" value="${esc(x.code)}" ${L}></label></div>
+  <div><label>น้ำหนักกระจกรวมก่อนแช่ (kg)<input type="number" inputmode="decimal" min="0" data-b="${i}" data-k="pre" value="${esc(x.pre)}" ${L}></label></div>
+  <div><label>ของเสียที่แยก PVB / ผง / ขอบเซรามิก (kg)<input type="number" inputmode="decimal" min="0" data-b="${i}" data-k="waste" value="${esc(x.waste)}" ${L}></label></div>
+  <button class="btn alt sm" data-tog="${i}">${x.col?"ขยายรอบนี้":"ย่อรอบนี้"}</button><button class="btn alt sm" data-del="${i}" ${L}>ลบรอบนี้</button></div>
+ ${STEPS.map((n,j)=>{const s=x.st[j];return `<div class="step"><div class="sh"><b>${j+1}. ${n}</b><span><span class="dur" id="d${i}_${j}"></span></span></div>
+  <div class="f">
+   <label>วันที่เริ่ม<input type="date" data-b="${i}" data-s="${j}" data-k="sd" value="${s.sd}" ${L}></label>
+   <label>เวลาเริ่ม<input type="time" data-b="${i}" data-s="${j}" data-k="st" value="${s.st}" ${L}></label>
+   <label>วันที่จบ<input type="date" data-b="${i}" data-s="${j}" data-k="ed" value="${s.ed}" ${L}></label>
+   <label>เวลาจบ<input type="time" data-b="${i}" data-s="${j}" data-k="et" value="${s.et}" ${L}></label>
+   <label>น้ำหนักเข้า (kg)<input type="number" inputmode="decimal" min="0" data-b="${i}" data-s="${j}" data-k="wi" value="${s.wi}" ${L}></label>
+   <label>น้ำหนักออก (kg)${HINT[j]?" · "+HINT[j]:""}<input type="number" inputmode="decimal" min="0" data-b="${i}" data-s="${j}" data-k="wo" value="${s.wo}" ${L}></label>
+   <label>ผู้ปฏิบัติ<input data-b="${i}" data-s="${j}" data-k="op" value="${esc(s.op)}" ${L}></label>
+   <label>หมายเหตุ<input data-b="${i}" data-s="${j}" data-k="nt" value="${esc(s.nt)}" ${L}></label>
+  </div>
+  <div class="bar"><button class="btn alt sm" data-now="s" data-b="${i}" data-s="${j}" ${L}>เริ่มตอนนี้</button><button class="btn alt sm" data-now="e" data-b="${i}" data-s="${j}" ${L}>จบตอนนี้</button></div></div>`}).join("")}
+ <div class="bal" id="bal${i}"></div><div class="bar bt" style="padding:0 12px 12px"><button class="btn alt sm" data-tog="${i}">ย่อรอบนี้</button></div></section>`;
+}
+function calc(){
+ const d=day();let any=false;
+ d.batches.forEach((x,i)=>{
+  x.st.forEach((s,j)=>{
+   const el=$("d"+i+"_"+j),m=dur(s);let w=false,t="ใช้เวลา "+fmt(m);
+   if(j==1&&m!=null){if(m<600){w=true;t+=" · ยังไม่ครบ 10 ชม."}else if(m>720){w=true;t+=" · เกิน 12 ชม."}}
+   if(s.sd&&s.ed&&m==null){w=true;t="เวลาจบก่อนเวลาเริ่ม"}
+   el.textContent=t;el.className="dur"+(w?" warn":"");
+  });
+  const bl=$("bal"+i),r=balance(x);
+  if(!r){bl.className="bal";bl.textContent="สมดุลน้ำหนัก: กรอกน้ำหนักก่อนแช่และน้ำหนักบรรจุถุงเพื่อตรวจ"}
+  else{bl.className="bal "+(r.bad?"warn":"ok");
+   bl.innerHTML=`สมดุลน้ำหนัก: ก่อนแช่ − ฟิล์ม − ของเสีย − บรรจุถุง = ${kg(r.diff)} kg (${r.pct.toFixed(1)}%) · เกณฑ์ ±${S.tol}% · <b>${r.bad?"ไม่ตรง":"ตรง"}</b>`+
+   (r.bad?` <label style="display:inline"><input type="checkbox" style="width:auto;min-height:0" data-b="${i}" data-k="chk" ${x.chk?"checked":""} ${d.signed?"disabled":""}> ตรวจซ้ำ / แก้ไขแล้ว</label>`:"");}
+  if(x.st.some(s=>dur(s)!=null))any=true;
+ });
+ let rows="";
+ STEPS.forEach((n,j)=>{let c=0,t=0;d.batches.forEach(x=>{const m=dur(x.st[j]);if(m!=null){c++;t+=m}});
+  rows+=`<tr><td>${j+1}. ${n}</td><td class="n">${c}</td><td class="n">${fmt(c?t:null)}</td><td class="n">${fmt(c?t/c:null)}</td></tr>`});
+ $("sum").innerHTML=`<table><tr><th>ขั้นตอน</th><th class="n">จำนวนรอบที่ทำ</th><th class="n">เวลารวม (ชม:นาที)</th><th class="n">เวลาเฉลี่ยต่อรอบ</th></tr>${rows}</table>`;
+ const bal=d.batches.length&&d.batches.every(x=>balance(x));
+ const flags=d.batches.filter(x=>balance(x)?.bad&&!x.chk).length;
+ const st=[true,d.batches.length>0,any,d.batches.length>0&&bal&&!flags,d.signed,false];
+ $("flow").innerHTML=["เปิดรอบ","บันทึกเวลาและน้ำหนัก","สรุปประจำวัน","สมดุลน้ำหนักตรง","ลงนามรับรอง"].map((t,i)=>`<li class="${st[i+1]?"on":""}">${t}</li>`).join("");
+}
+function viewMonth(){
+ const days=Object.keys(S.days).filter(k=>k.startsWith(ym)&&S.days[k].batches.length).sort();
+ const m=S.months[ym]||(S.months[ym]={});
+ let tot=0;
+ const rows=days.map(k=>{const d=S.days[k],f=d.batches.reduce((a,x)=>a+num(x.st[7].wo),0);tot+=f;
+  return `<tr><td><button class="btn alt sm" data-go="${k}">${k}</button></td><td>${d.type||"–"}</td><td class="n">${d.batches.length}</td><td class="n">${kg(f)}</td><td>${d.signed?"ลงนามแล้ว":"ยังไม่ปิดวัน"}</td></tr>`}).join("");
+ const ev=[["bw","บิลน้ำ"],["be","บิลไฟ"],["inv","ใบซื่อขาย"],["mi","ไมล์รถ"]];
+ return `<div class="row"><label>เดือน<input type="month" id="ym" value="${ym}"></label>
+  <label>เกณฑ์สมดุลน้ำหนัก (± %)<input type="number" step="0.5" min="0" id="tol" value="${S.tol}"></label></div>
+ <h2 style="margin-top:16px">ข้อมูลรายวันของเดือนนี้</h2>
+ <div class="tw"><table><tr><th>วันที่</th><th>ชนิดกระจก</th><th class="n">จำนวนรอบ</th><th class="n">น้ำหนักบรรจุถุง (kg)</th><th>สถานะ</th></tr>${rows||'<tr><td colspan="5">ยังไม่มีข้อมูลเดือนนี้ เริ่มที่แท็บบันทึกรายวัน</td></tr>'}
+ <tr><th colspan="3">รวม</th><th class="n">${kg(tot)}</th><th></th></tr></table></div>
+ <h2 style="margin-top:16px">สิ้นเดือน: เทียบหลักฐาน</h2>
+ <div class="row">${ev.map(([k,n])=>`<label><span><input type="checkbox" style="width:auto;min-height:0" data-m="${k}" ${m[k]?"checked":""}> ${n}ครบแล้ว</span></label>`).join("")}
+  <label>หน่วยไฟรวม (kWh)<input type="number" data-mv="kwh" value="${esc(m.kwh)}"></label>
+  <label>หน่วยน้ำรวม (ลบ.ม.)<input type="number" data-mv="wat" value="${esc(m.wat)}"></label>
+  <label>ระยะทางรถขนส่ง (กม.)<input type="number" data-mv="km" value="${esc(m.km)}"></label></div>
+ <div class="bar"><button class="btn" id="csv">ส่งออก CSV เพื่อคำนวณ CFP</button></div>`;
+}
+function exportCsv(){
+ const out=[["วันที่","ชนิดกระจก","รอบ","รหัส/พาเลท","น้ำหนักก่อนแช่","ของเสีย","ขั้นตอน","วันที่เริ่ม","เวลาเริ่ม","วันที่จบ","เวลาจบ","นาที","น้ำหนักเข้า","น้ำหนักออก","ผู้ปฏิบัติ","หมายเหตุ"]];
+ Object.keys(S.days).filter(k=>k.startsWith(ym)).sort().forEach(k=>{const d=S.days[k];d.batches.forEach((b,i)=>b.st.forEach((s,j)=>out.push([k,d.type,i+1,b.code,b.pre,b.waste,STEPS[j],s.sd,s.st,s.ed,s.et,dur(s)??"",s.wi,s.wo,s.op,s.nt])))});
+ const t="\ufeff"+out.map(r=>r.map(v=>'"'+String(v??"").replace(/"/g,'""')+'"').join(",")).join("\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv;charset=utf-8"}));a.download="tlh-glass-"+ym+".csv";a.click();
+}
+const $=id=>document.getElementById(id),$app=$("app"),$t1=$("t1"),$t2=$("t2");
+$t1.onclick=()=>{tab=1;render()};$t2.onclick=()=>{tab=2;render()};
+$app.addEventListener("input",e=>{
+ const t=e.target,D=t.dataset;
+ if(t.id=="date"){if(t.value){cur=t.value;render()}return}
+ if(t.id=="ym"){if(t.value){ym=t.value;render()}return}
+ if(t.id=="tol"){S.tol=num(t.value);save();return}
+ if(D.d){day()[D.d]=t.value;document.querySelectorAll(`[data-d="${D.d}"]`).forEach(x=>{if(x!==t)x.value=t.value})}
+ else if(D.m)S.months[ym][D.m]=t.checked;
+ else if(D.mv)S.months[ym][D.mv]=t.value;
+ else if(D.b!==undefined){const b=day().batches[D.b],v=t.type=="checkbox"?t.checked:t.value;if(D.s!==undefined)b.st[D.s][D.k]=v;else b[D.k]=v}
+ else return;
+ save();if(tab==1)calc();
+});
+$app.addEventListener("click",e=>{
+ const t=e.target.closest("button");if(!t)return;const D=t.dataset,d=day();
+ if(t.id=="addB"||D.add!==undefined){d.batches.forEach(x=>x.col=true);d.batches.push({code:"",pre:"",waste:"",chk:false,col:false,st:STEPS.map(newStep)});save();render();const el=document.querySelectorAll(".batch"),nb=el[el.length-1];nb.classList.add("new");nb.scrollIntoView({behavior:"smooth",block:"start"});nb.querySelector("input").focus({preventScroll:true})}
+ else if(D.tog!==undefined){const x=d.batches[D.tog],sec=t.closest(".batch");x.col=!x.col;sec.classList.toggle("col",x.col);sec.querySelectorAll("[data-tog]").forEach(b=>b.textContent=x.col?"ขยายรอบนี้":"ย่อรอบนี้");if(x.col)sec.scrollIntoView({behavior:"smooth",block:"nearest"});save()}
+ else if(D.del!==undefined){if(confirm("ลบรอบที่ "+(+D.del+1)+" ใช่หรือไม่?")){d.batches.splice(D.del,1);save();render()}}
+ else if(D.now){const B=d.batches[D.b],j=+D.s,[a,b]=nowParts();const put=(jj,k,v)=>{B.st[jj][k]=v;const el=document.querySelector(`[data-b="${D.b}"][data-s="${jj}"][data-k="${k}"]`);if(el)el.value=v};if(D.now=="s"){put(j,"sd",a);put(j,"st",b)}else{put(j,"ed",a);put(j,"et",b);if(j<7&&!B.st[j+1].sd){put(j+1,"sd",a);put(j+1,"st",b)}}save();calc()}
+ else if(D.go){cur=D.go;tab=1;render();scrollTo(0,0)}
+ else if(t.id=="csv")exportCsv();
+ else if(t.id=="sign"){
+  if(d.signed){d.signed=false;save();render();return}
+  const m=[];
+  if(!d.batches.length)m.push("ยังไม่มีรอบที่บันทึก");
+  if(!d.rec.trim()||!d.rev.trim())m.push("ต้องกรอกชื่อผู้บันทึกและผู้ตรวจสอบ");
+  if(!d.type)m.push("ยังไม่ได้เลือกชนิดกระจก");
+  const un=d.batches.filter(x=>!balance(x)).length;if(un)m.push("มี "+un+" รอบที่ยังกรอกน้ำหนักไม่ครบสำหรับตรวจสมดุล");
+  const fl=d.batches.filter(x=>balance(x)?.bad&&!x.chk).length;if(fl)m.push("มี "+fl+" รอบที่น้ำหนักไม่ตรง ให้ตรวจซ้ำและติ๊ก “ตรวจซ้ำ / แก้ไขแล้ว”");
+  if(m.length){$("msg").innerHTML='<div class="msg" role="alert">'+m.join("<br>")+"</div>";return}
+  d.signed=true;save();render();
+ }
+});
+render();
+</script>
+</body>
+</html>
